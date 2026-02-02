@@ -1,5 +1,12 @@
-*{
+/* ===== RESET GLOBAL ===== */
+* {
+    /* Remove margens padrão de todos os elementos */
     margin: 0;
+
+    /* Remove espaçamentos internos padrão */
     padding: 0;
+
+    /* Faz largura e altura incluírem padding e borda */
+    /* Evita cálculos malucos e quebra de layout */
     box-sizing: border-box;
 }

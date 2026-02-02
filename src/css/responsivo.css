@@ -1,21 +1,28 @@
+/* ===== ESTILOS PARA TELAS MENORES (TABLET E MOBILE) ===== */
 @media (max-width: 768px) {
-    .header h1{
+
+    /* Diminui o tamanho do título principal */
+    .header h1 {
         font-size: 32px;
     }
 
+    /* Ajusta o subtítulo para melhor leitura no mobile */
     .header .subtitle {
         font-size: 16px;
     }
 
-    .card-header{
+    /* Reduz o tamanho do título dos cards */
+    .card-header {
         font-size: 16px;
     }
 
+    /* Empilha os cards de código verticalmente */
     .code-grid {
         flex-direction: column;
     }
 
-    .code-card{
+    /* Faz cada card ocupar 100% da largura */
+    .code-card {
         width: 100%;
     }
 }
