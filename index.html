@@ -4,81 +4,95 @@
 <html lang="pt-BR">
   <!-- Define o idioma da página como português do Brasil (SEO + acessibilidade) -->
 
-    <head>
-        <!-- Cabeçalho do documento -->
-        <meta charset="UTF-8" />
-        <!-- Define o padrão de caracteres (acentos, emojis, etc.) -->
+  <head>
+    <!-- Cabeçalho do documento -->
+    <meta charset="UTF-8" />
+    <!-- Define o padrão de caracteres (acentos, emojis, etc.) -->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Garante que o layout funcione corretamente em celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Garante que o layout funcione corretamente em celulares e tablets -->
 
-        <title>Semana do Zero ao Programador Contratado</title>
-        <!-- Título da aba do navegador -->
+    <title>Semana do Zero ao Programador Contratado</title>
+    <!-- Título da aba do navegador -->
 
-        <!-- Pré-conexão com servidores do Google Fonts para melhorar performance -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Pré-conexão com servidores do Google Fonts para melhorar performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Importação da fonte Roboto Mono -->
-        <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet"/>
+    <!-- Importação da fonte Roboto Mono -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="./src/css/reset.css">
-        <link rel="stylesheet" href="./src/css/estilos.css">
-        <link rel="stylesheet" href="./src/css/responsivo.css">
-    </head>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/estilos.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+  </head>
 
-    <body>
-        <!-- Cabeçalho da página -->
-        <header class="header">
-        <!-- Título principal da aplicação -->
-        <h1>Fundo Mágico</h1>
+  <body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+      <!-- Título principal da aplicação -->
+      <h1>Fundo Mágico</h1>
 
-        <!-- Subtítulo explicativo -->
-        <p class="subtitle">
-            Transforme suas ideias em backgrounds incríveis com o poder da IA. Descreva o que você imagina e veja a mágica acontecer.
-        </p>
-        </header>
+      <!-- Subtítulo explicativo -->
+      <p class="subtitle">
+        Transforme suas ideias em backgrounds incríveis com o poder da IA.
+        Descreva o que você imagina e veja a magia acontecer.
+      </p>
+    </header>
 
-        <!-- Conteúdo principal da página -->
-        <main class="container">
-            <!-- Card principal com o formulário -->
-            <section class="card main">
-                <!-- Título da seção -->
-                <h2 class="card-header">Descreva o background que você deseja</h2>
+    <!-- Conteúdo principal da página -->
+    <main class="container">
+      <!-- Card principal com o formulário -->
+      <section class="card main">
+        <!-- Título da seção -->
+        <h2 class="card-header">Descreva o background que você deseja</h2>
 
-                <!-- Formulário para entrada do usuário -->
-                <form class="form-group">
-                    <!-- Campo de texto onde o usuário descreve o background -->
-                    <textarea rows="5" id="description" placeholder="Ex: Um gradiente suave que vai do azul claro ao azul escuro.">
-                    </textarea>
-                </form>
-            </section>
+        <!-- Formulário para entrada do usuário -->
+        <form class="form-group">
+          <!-- Campo de texto onde o usuário descreve o background -->
+          <textarea
+            rows="5"
+            id="description"
+            placeholder="Ex: Um gradiente suave que vai do azul claro ao azul escuro."
+          >
+          </textarea>
 
-            <!-- Seção onde o preview do background será exibido (via JavaScript) -->
-            <section id="preview-section" class="preview-card">
-                <!-- Conteúdo gerado dinamicamente -->
-            </section>
+          <!-- Botão para gerar o background mágico -->
+          <button id="generate-btn" class="btn-magic">
+            <span id="btn-text">Gerar Background Mágico</span>
+          </button>
+        </form>
+      </section>
 
-            <!-- Seção que exibe os códigos gerados -->
-            <section id="code-output" class="code-grid">
-                <!-- Card com o código HTML gerado -->
-                <div class="card code-card">
-                    <h3 class="code-title">Código HTML</h3>
+      <!-- Seção onde o preview do background será exibido (via JavaScript) -->
+      <section id="preview-section" class="preview-card">
+        <!-- Conteúdo gerado dinamicamente -->
+      </section>
 
-                    <!-- Bloco para exibição de código HTML -->
-                    <pre id="html-code" class="code-block"></pre>
-                </div>
+      <!-- Seção que exibe os códigos gerados -->
+      <section id="code-output" class="code-grid">
+        <!-- Card com o código HTML gerado -->
+        <div class="card code-card">
+          <h3 class="code-title">Código HTML</h3>
 
-                <!-- Card com o código CSS gerado -->
-                <div class="card code-card">
-                    <h3 class="code-title">Código CSS</h3>
+          <!-- Bloco para exibição de código HTML -->
+          <pre id="html-code" class="code-block"></pre>
+        </div>
 
-                    <!-- Bloco para exibição de código CSS -->
-                    <pre id="css-code" class="code-block"></pre>
-                </div>
-            </section>
-        </main>
-    </body>
+        <!-- Card com o código CSS gerado -->
+        <div class="card code-card">
+          <h3 class="code-title">Código CSS</h3>
+
+          <!-- Bloco para exibição de código CSS -->
+          <pre id="css-code" class="code-block"></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/js/index.js"></script>
+    
+  </body>
 </html>

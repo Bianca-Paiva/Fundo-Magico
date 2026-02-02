@@ -21,17 +21,19 @@ body {
 
 /* ===== CABEÇALHO ===== */
 .header {
-  /* Centraliza todo o conteúdo do header */
-  text-align: center;
-
   /* Espaço abaixo do cabeçalho */
   margin-bottom: 48px;
+
+  /* Centraliza todo o conteúdo do header */
+  text-align: center;
 }
 
 /* Título principal */
 .header h1 {
   margin-bottom: 16px;
   font-size: 48px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Subtítulo do header */
@@ -55,12 +57,6 @@ body {
 
   /* Centraliza o container na tela */
   margin: 0 auto;
-
-  /* Necessário para controle de camadas */
-  position: relative;
-
-  /* Garante que fique acima do fundo */
-  z-index: 99;
 }
 
 /* ===== CARD BASE (REUTILIZÁVEL) ===== */
@@ -129,7 +125,7 @@ body {
   color: #a19e9e;
 }
 
-/* ===== BOTÃO (quando existir no HTML) ===== */
+/* ===== BOTÃO ===== */
 .form-group .btn-magic {
   width: 100%;
   padding: 16px 32px;
