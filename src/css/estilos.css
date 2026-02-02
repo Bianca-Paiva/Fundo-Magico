@@ -1,0 +1,209 @@
+/* ===== ESTILO GLOBAL DA PÁGINA ===== */
+body {
+  /* Cor de fundo base (caso a imagem não carregue) */
+  background-color: #0f131a;
+
+  /* Cor padrão do texto */
+  color: #ffffff;
+
+  /* Imagem de fundo da página */
+  background: url(../images/bg.JPG);
+
+  /* Fonte monoespaçada */
+  font-family: "Roboto Mono", monospace;
+
+  /* Altura da linha para melhorar legibilidade */
+  line-height: 1.4;
+
+  /* Espaçamento interno geral da página */
+  padding: 32px 24px;
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+  /* Centraliza todo o conteúdo do header */
+  text-align: center;
+
+  /* Espaço abaixo do cabeçalho */
+  margin-bottom: 48px;
+}
+
+/* Título principal */
+.header h1 {
+  margin-bottom: 16px;
+  font-size: 48px;
+}
+
+/* Subtítulo do header */
+.header .subtitle {
+  font-size: 19.2px;
+
+  /* Branco com transparência para ficar mais suave */
+  color: #ffffffcc;
+
+  /* Limita a largura para melhor leitura */
+  max-width: 700px;
+
+  /* Centraliza horizontalmente */
+  margin: 0 auto;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+  /* Largura máxima do conteúdo */
+  max-width: 1024px;
+
+  /* Centraliza o container na tela */
+  margin: 0 auto;
+
+  /* Necessário para controle de camadas */
+  position: relative;
+
+  /* Garante que fique acima do fundo */
+  z-index: 99;
+}
+
+/* ===== CARD BASE (REUTILIZÁVEL) ===== */
+.card {
+  /* Borda branca com transparência */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* Cantos arredondados */
+  border-radius: 16px;
+
+  /* Espaçamento interno */
+  padding: 32px;
+
+  /* Espaço entre os cards */
+  margin-bottom: 32px;
+}
+
+/* Título interno dos cards */
+.card-header {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 20.8px;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-group textarea {
+  /* Fundo levemente transparente */
+  background-color: rgba(255, 255, 255, 0.05);
+
+  /* Cor do texto digitado */
+  color: #ffffff;
+
+  /* Ocupa toda a largura do card */
+  width: 100%;
+
+  /* Altura mínima do textarea */
+  min-height: 120px;
+
+  /* Borda padrão */
+  border: 1px solid #474646;
+
+  /* Bordas arredondadas */
+  border-radius: 8px;
+
+  /* Tamanho da fonte */
+  font-size: 16px;
+
+  /* Espaço abaixo do campo */
+  margin-bottom: 20px;
+
+  /* Espaçamento interno */
+  padding: 16px;
+}
+
+/* Estilo quando o textarea está em foco */
+.form-group textarea:focus {
+  /* Remove o contorno padrão do navegador */
+  outline: none;
+
+  /* Destaca a borda com a cor do tema */
+  border-color: #a655f7;
+}
+
+/* Placeholder do textarea */
+.form-group textarea::placeholder {
+  color: #a19e9e;
+}
+
+/* ===== BOTÃO (quando existir no HTML) ===== */
+.form-group .btn-magic {
+  width: 100%;
+  padding: 16px 32px;
+
+  /* Gradiente moderno */
+  background: linear-gradient(90deg, #a655f7 0%, #ff80aa 100%);
+
+  color: #ffffff;
+  font-size: 17.6px;
+
+  /* Remove borda padrão */
+  border: none;
+
+  border-radius: 8px;
+  font-weight: 600;
+
+  /* Cursor de ação */
+  cursor: pointer;
+
+  /* Animação suave */
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover do botão */
+.form-group .btn-magic:hover {
+  /* Dá sensação de botão "subindo" */
+  transform: translateY(-2px);
+}
+
+/* ===== PREVIEW ===== */
+.preview-card {
+  /* Começa oculto (provavelmente será exibido via JS) */
+  display: none;
+}
+
+/* ===== GRID DE CÓDIGOS ===== */
+.code-grid {
+  /* Exibe os cards lado a lado */
+  display: flex;
+
+  /* Espaço entre os cards */
+  gap: 24px;
+}
+
+/* Card individual de código */
+.code-card {
+  background-color: #21242a;
+  border: 1px solid #ffffff33;
+  padding: 24px;
+
+  /* Cada card ocupa metade do espaço */
+  width: 50%;
+}
+
+/* Título do bloco de código */
+.code-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* Bloco onde o código aparece */
+.code-block {
+  background-color: #0a0c10;
+
+  /* Cor estilo terminal */
+  color: #5eead4;
+
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+
+  /* Mantém quebras de linha */
+  white-space: pre-wrap;
+
+  /* Evita quebra de layout com linhas longas */
+  word-wrap: break-word;
+}
