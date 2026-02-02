@@ -54,7 +54,7 @@ O projeto foi desenvolvido para múltiplos dispositivos:
 
 ---
 
-## 👩‍💻 Autora
+## 👩🏻‍💻 Autora
 Desenvolvido por **Bianca Silveria Paiva**  
 Curso: Semana do Zero ao Programador Contratado 2026 
 
